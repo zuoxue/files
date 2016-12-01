@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<title>风车</title>
 	<style>
+		
 		.cont{
 			width:400px;
 			height:400px;
@@ -14,21 +15,62 @@
 			width:200px;
 			height:200px;
 			margin:0;
+			position:absolute;
 		}
 		
-		.cl1{
-			position:absolute;
-			border-left:100px solid red;
+		.cl1{		
+			background:linear-gradient(to top,pink 50%,rgba(0,0,0,0) 50%);
 			border-radius:50%;
+			top:100px;
+		}
+		
+		.cl2{		
+			background:linear-gradient(to right,red 50%,rgba(0,0,0,0) 50%);
+			border-radius:50%;
+			left:100px;
+		}
+		
+		.cl3{		
+			background:linear-gradient(to bottom,green 50%,rgba(0,0,0,0) 50%);
+			border-radius:50%;
+			left:200px;
+			top:100px;
+		}
+		
+		.cl4{		
+			background:linear-gradient(to left,blue 50%,rgba(0,0,0,0) 50%);
+			border-radius:50%;
+			top:200px;
+			left:100px;
+		}
+		.gunzi{
+			width:5px;
+			position:absolute;
+			height:400px;
+			background:black;
+			left:204px;
+			top:208px;
+		}
+		@keyframes rotate{
+			from{transform:rotate(0deg);}
+			to{transform:rotate(360deg)}
+		}
+		
+		.cont{
+			animation:rotate 1s linear infinite
 		}
 	</style>
 </head>
 <body>
-	<div class="cont">
-		<div class="cl1"></div>
-		<div class="cl2"></div>
-		<div class="cl3"></div>
-		<div class="cl4"></div>
-	</div>
+	<div class="wrap">
+		<div class="cont">
+			<div class="cl1"></div>
+			<div class="cl2"></div>
+			<div class="cl3"></div>
+			<div class="cl4"></div>
+			
+		</div>
+		<div class="gunzi"></div>
+	</div>		
 </body>
 </html>
