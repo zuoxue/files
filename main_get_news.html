@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="color"></div>
+        <iframe id="child" width="800" height = "600" frameborder="0" src="https://zuoxue.github.io/files/change.html"></iframe>
+        <script type="text/javascript">
+            window.onload=function(){
+                window.frames[0].postMessage("getColor","https://zuoxue.github.io");
+            }
+
+            window.addEventListener("message",function(e){
+                var color = e.data;
+                document.getElementById("color").style.backgroundColor = color;
+            }, false);
+        </script> 
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" style="width:800px;height:600px;border:1px solid black" onclick="changeColor()">
+        
+    </div>
+
+    <script type="text/javascript">
+        var container = document.getElementById("container");
+
+        window.addEventListener("message",function(e){
+            if(e.source !=window.parent){
+                return;
+            }
+            var color = container.style.backgroundColor;
+            window.parent.postMessage(color,"*");
+        }, false);
+
+        function changeColor(){
+            var arr = ["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+            var val = "";
+            for(var i = 0;i<6;i++){
+                var ran = Math.floor(Math.random()*15);
+                val += arr[ran];
+            }
+
+            container.style.background="#"+val;
+            window.parent.postMessage("#"+val,"*");
+        }
+    </script>
+</body>
+</html>
