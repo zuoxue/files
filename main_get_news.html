@@ -5,10 +5,10 @@
     </head>
     <body>
         <div id="color" style="width:300px;height:300px"></div>
-        <iframe id="child" width="400" height = "300" frameborder="0" src="https://zuoxue.github.io/files/change.html"></iframe>
+        <iframe id="child" width="400" height = "300" frameborder="0" src="http://zuoxue.github.io/files/change.html"></iframe>
         <script type="text/javascript">
             window.onload=function(){
-                window.frames[0].postMessage("getColor","https://zuoxue.github.io");
+                window.frames[0].postMessage("getColor","http://zuoxue.github.io");
             }
 
             window.addEventListener("message",function(e){
