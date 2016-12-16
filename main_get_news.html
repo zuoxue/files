@@ -5,6 +5,7 @@
     </head>
     <body>
         <div id="color" style="width:300px;height:300px"></div>
+        <input type="text" name="" value="haige" id="disp_color"/>
         <iframe id="child" width="400" height = "300" frameborder="0" src="http://zuoxue.github.io/files/change.html"></iframe>
         <script type="text/javascript">
             window.onload=function(){
@@ -14,6 +15,7 @@
             window.addEventListener("message",function(e){
                 var color = e.data;
                 document.getElementById("color").style.backgroundColor = color;
+                document.getElementById("disp_color").value = color;
             }, false);
         </script> 
     </body>
