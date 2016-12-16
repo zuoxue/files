@@ -15,7 +15,7 @@
             window.addEventListener("message",function(e){
                 var color = e.data;
                 document.getElementById("color").style.backgroundColor = color;
-                document.getElementById("disp_color").value = color;
+                document.getElementById("disp_color").value = color.substring(1,color.length);
             }, false);
         </script> 
     </body>
